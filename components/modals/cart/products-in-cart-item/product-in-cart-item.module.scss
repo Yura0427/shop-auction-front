@@ -1,0 +1,244 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productInCart {
+  border-bottom: 1px solid $usual-nav-bg;
+  padding: 20px 0;
+  max-width: 740px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__line {
+    width: 740px;
+    margin-bottom: 4px;
+  }
+
+  &__img {
+    width: 85px;
+    height: 73px;
+    flex-shrink: 0;
+
+    img {
+      min-width: auto !important;
+      height: auto !important;
+      width: auto !important;
+    }
+  }
+
+  &__priceBlock {
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  &__price {
+    margin-left: 2px;
+    margin-bottom: 5px;
+    color: #16BF19;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: start;
+    line-height: 22px;
+    white-space: nowrap;
+  }
+
+  &__discountedPrice {
+    @extend .productInCart__price;
+    color: $discountedPriceColor;
+    font-size: 24px;
+  }
+
+  &__previousPrice {
+    display: block;
+    margin-left: 4px;
+    text-align: start;
+    color:$font-color-gray;
+  }
+
+  &__amount {
+    margin-left: 4px;
+    text-align: start;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    white-space: nowrap;
+    
+  }
+
+  &__plusMinusItem {
+    display: flex;
+    margin-left: 54px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__quantity {
+    margin-right: 7px;
+    margin-left: 7px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 44px;
+    border: 1px solid $usual-nav-bg;
+    outline: none;
+  }
+
+  &__minus,
+  &__plus {
+    cursor: pointer;
+    color: #0a7334;
+  }
+
+  .btnDisabled {
+    color: #969595;
+  }
+
+  &__delete {
+    margin-left: 54px;
+    cursor: pointer;
+  }
+
+  &__titleBlock {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+  }
+
+  .titleBlock {
+    &__name {
+      justify-content: left;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 340px;
+
+      a {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        text-decoration: none;
+        cursor:default;
+
+        > * {
+          margin: 0 5px;
+        }
+
+        &:hover {
+          span:first-child {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__params{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    &__size {
+      border: 2px solid gray;
+      padding: 3px;
+      font-size: 12px;
+      min-width: 25px;
+      height: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $font-color;
+    }
+
+    &__color {
+      width: 25px;
+      height: 25px;
+      display: inline-flex;
+      border: 1px solid #4e5a5e;
+      border-radius: 50%;
+    }
+  }
+
+  &__priceQuantityDelete {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .productInCart {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 80px 60px;
+
+    &__titleBlock {
+      justify-content: center;
+    }
+
+    &__block {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      z-index: 2;
+    }
+
+    &__priceQuantityDelete {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+    &__priceBlock {
+      order: 3;
+    }
+
+    &__plusMinusItem {
+      order: 2;
+      margin-left: 20px;
+    }
+
+    &__delete {
+      order: 1;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 50px;
+      padding-right: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .productInCart {
+    .titleBlock {
+      &__rating {
+        display: none;
+      }
+    }
+
+    &__priceQuantityDelete {
+      padding-top: 0;
+    }
+  }
+}

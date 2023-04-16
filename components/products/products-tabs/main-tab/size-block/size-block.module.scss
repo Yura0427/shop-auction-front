@@ -1,0 +1,42 @@
+@import 'styles/vars';
+
+.sizeBlock {
+  display: flex;
+  flex-direction: column;
+
+  .sizeHead {
+    color: #9b9b9b;
+  }
+
+  .sizeBox {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+
+    .label {
+      position: relative;
+      height: 35px;
+      min-width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      padding: 0 8px;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px gray inset;
+      transition: .3s;
+
+      &:hover {
+        box-shadow: 0 0 0 4px $primary-color inset;
+      }
+    }
+
+    .active {
+      box-shadow: 0 0 0 4px $primary-color inset;
+    }
+  }
+}

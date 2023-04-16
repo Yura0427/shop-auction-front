@@ -1,0 +1,222 @@
+@import 'styles/vars';
+
+.col {
+  padding: 0 10px 60px 10px;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+
+  .love_btn {
+    position: absolute;
+    z-index: 1;
+    top: 165px;
+    left: 13px;
+    stroke: #ff002e;
+    fill: #ff002e;
+  }
+
+  .love_btn:hover {
+    stroke: #ad0324;
+    fill: #ad0324;
+  }
+
+  .btn {
+    margin-top: auto;
+    border-radius: 30px;
+    border: none;
+    background-color: #26bd62;
+    align-self: center;
+    padding: 10px 30px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -20px;
+    min-width: 125px;
+    max-height: 107px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      width: 1.2rem;
+      height: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:active {
+      background-color: rgba($primary-color, 0.9) !important;
+    }
+
+    &:hover,
+    &_cart {
+      background-color: #1ba34f;
+      border-color: $primary-color;
+    }
+  }
+
+  .btn.disabled {
+    background: $font-color-gray;
+  }
+
+  .notAvailable {
+    color: red;
+  }
+}
+
+.card {
+  border-radius: 40px;
+  height: 100%;
+  box-shadow: 0 1px 16px rgba(38, 189, 98, 0.12);
+  border-color: #eeeeee;
+  transition: 0.3s ease;
+  position: relative;
+
+  .title {
+    color: $font-color;
+    font-size: 20px;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .body {
+    display: flex;
+    margin-top: auto;
+    padding: 15px 15px 35px 15px;
+  }
+
+  &_price_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .priceRow {
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    > div:first-child {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0;
+
+      span {
+        font-size: 15px;
+      }
+    }
+
+    .subTitle {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 15px;
+      margin-top: 0;
+      line-height: 1;
+      margin-bottom: 0 !important;
+
+      .price {
+        font-size: 23px;
+        color: $primary-color;
+
+        @media screen and (min-width: #{$xs}px) {
+          font-size: 19px;
+        }
+
+        @media screen and (min-width: #{$xl}px) {
+          font-size: 23px;
+        }
+      }
+
+      .oldPrice {
+        font-size: 21px;
+        font-weight: 400;
+        color: $font-color; 
+        text-decoration: line-through;
+        margin-bottom: 0;
+      
+        @media screen and (min-width: #{$xs}px) {
+          font-size: 17px;
+        }
+      
+        @media screen and (min-width: #{$xl}px) {
+          font-size: 21px;
+        }
+      }
+
+      .discountedPrice {
+        font-size: 25px;
+        margin-bottom: 0;
+        color: $discountedPriceColor;
+      
+        @media screen and (min-width: #{$xs}px) {
+          font-size: 21px;
+        }
+      
+        @media screen and (min-width: #{$xl}px) {
+          font-size: 25px;
+        }
+      }
+
+      span {
+        font-size: 15px;
+        color: $primary-color;
+        margin-top: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .selectBlock {
+    display: flex;
+    margin: 0 -10px;
+    justify-content: space-between;
+    margin-top: auto;
+
+    > div {
+      margin: 10px 15px 10px 10px;
+      max-width: 120px;
+      flex-wrap: wrap;
+    }
+
+    > div:first-child {
+      width: 70px;
+    }
+
+    > div:last-child {
+      margin: 10px 0 10px 0;
+      flex-grow: 1;
+    }
+  }
+  .selectBlock_noColor {
+    @extend .selectBlock;
+    justify-content: center;
+
+    > div:first-child {
+      display: none;
+    }
+  }
+
+  &:hover {
+    box-shadow: #e3eee7 0 0 6px 6px;
+  }
+
+  &_review {
+    font-size: 14px;
+  }
+}
+
+.controlWidthSize {
+  width: 70px;
+
+  @media screen and (min-width: #{$sm}px) {
+    width: 90px;
+  }
+}

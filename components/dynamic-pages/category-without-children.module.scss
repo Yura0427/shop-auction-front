@@ -1,0 +1,83 @@
+@import './styles/vars';
+
+.scroll {
+  position: relative;
+
+  :global(.globalBreadCrumbs) {
+    position: fixed;
+    top: 220px;
+    z-index: 11;
+    width: 100%;
+  }
+
+  :global(.globalSideBar) {
+    position: fixed;
+    top: 270px;
+    max-height: calc(100vh - 270px);
+    overflow: hidden scroll;
+    transition: .3s ease;
+
+    :global(.input-range) {
+      margin-left: 8px;
+      width: 93%;
+      margin-right: 30px;
+    }
+  }
+
+  :global(.shortSideBar):global(.globalSideBar) {
+    max-height: calc(100vh - 270px - 190px);
+  }
+
+  .mainFilter {
+    background: #ffffff;
+    position: fixed;
+    top: 210px;
+    padding-top: 55px;
+    left: 50%;
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -26px;
+      left: 0;
+      width: 100%;
+      height: 26px;
+      background: #fff;
+    }
+  }
+
+  .scrollProduct {
+    margin-top: 190px;
+  }
+
+  @media (min-width: 1400px) {
+    .mainFilter {
+      transform: translateX(-320px);
+      width: 1020px;
+    }
+
+    :global(.globalSideBar) {
+      width: 330px;
+    }
+
+  }
+
+  @media (max-width: 1400px) {
+    .mainFilter {
+      transform: translateX(0);
+      left: 27%;
+      width: 73%;
+    }
+
+    :global(.globalSideBar) {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    :global(.globalSideBar) {
+      width: 250px;
+    }
+  }
+}

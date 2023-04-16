@@ -1,0 +1,17 @@
+.love {
+  &_btn {
+    margin-left: auto;
+    padding: 0;
+    stroke: #ff002e;
+    fill: #ff002e;
+    background: none;
+    outline: none;
+    border: none;
+    
+    &:hover {
+      fill: #ad0324;
+      stroke: #ad0324;
+    }
+  }
+}
+  

@@ -1,0 +1,21 @@
+.liqpayButton {
+  border: none;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: OpenSans, sans-serif;
+  cursor: pointer;
+  background: rgba(122, 183, 43, 1);
+  visibility: hidden;
+}
+
+.liqpayButton:hover {
+  opacity: 0.5;
+}
+
+.liqpayButton:not(:hover) {
+  opacity: 1;
+}

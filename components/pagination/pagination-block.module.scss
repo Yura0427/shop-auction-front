@@ -1,0 +1,73 @@
+@import 'styles/vars';
+@import 'styles/mixins';
+
+.pagination-block {
+  margin-top: 2rem;
+
+  ul {
+    @include center-flex($type: 'all');
+
+    li {
+      a {
+        @include center-flex($type: 'all');
+        outline: none;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: $usual-nav-bg;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.2rem;
+      }
+
+      &:first-child,
+      &:last-child {
+        a {
+          padding: 0.27rem;
+        }
+      }
+    }
+  }
+
+  .page {
+    a {
+      padding: 0.14rem 0.6rem;
+    }
+  }
+
+  .active-page {
+    a {
+      background-color: $primary-color !important;
+      color: white;
+      cursor: default;
+
+      &:hover {
+        color: white;
+        background-color: $usual-nav-bg;
+      }
+    }
+  }
+
+  .break {
+    a {
+      @include center-flex($type: 'hor');
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      margin-right: 0.2rem;
+    }
+  }
+
+  .disabled {
+    a {
+      cursor: default;
+      color: #aaa;
+
+      &:hover {
+        color: #aaa;
+        background-color: white;
+      }
+    }
+  }
+}

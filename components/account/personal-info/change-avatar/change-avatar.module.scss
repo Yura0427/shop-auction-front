@@ -1,0 +1,81 @@
+@import 'styles/vars';
+@import 'styles/mixins';
+
+.block {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+
+  button:first-of-type {
+    margin-right: 1rem;
+  }
+}
+
+.container {
+  margin: 2rem 0 1rem;
+  @include center-flex('justify');
+
+  .avatar-btn-wrapper {
+    position: relative;
+    width: max-content;
+  }
+
+  .avatar-wrapper {
+    .avatar-overlay {
+      @include size(150px, 150px);
+      @include center-flex('all');
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: all ease 0.25s;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    &:hover,
+    &:focus {
+      .avatar-overlay {
+        pointer-events: initial;
+        opacity: 1;
+        transition: all ease 0.25s;
+      }
+    }
+  }
+
+  .delete-img {
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    cursor: pointer;
+    transition: all ease 0.25s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: all ease 0.25s;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.error-msg {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .container {
+    @include center-flex('all');
+    margin: 0;
+    width: 100%;
+  }
+}

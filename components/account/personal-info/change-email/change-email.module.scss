@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+
+  .edit-btn {
+    position: absolute;
+    right: -1rem;
+    top: -3.7rem;
+    transition: all ease 0.25s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: all ease 0.25s;
+    }
+  }
+}
+
+.btn-wrapper {
+  margin-top: 2rem;
+
+  .save-btn {
+    margin-right: 1rem;
+  }
+}
+
+.content {
+  p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+    span:first-of-type {
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+.resendMessage {
+  &__btn {
+    min-width: 200px;
+    border: none;
+    transition: opacity 0.3s ease;
+    margin-right: 1rem;
+  }
+
+  &__timerBlock {
+    position: relative;
+    padding-top: 2px;
+
+    .spinner {
+      position: absolute;
+      top: -3px;
+      right: 72px;
+    }
+  }
+
+  &__timer {
+    text-align: center;
+  }
+}

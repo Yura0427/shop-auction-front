@@ -1,0 +1,40 @@
+@import 'styles/vars';
+
+.container {
+  margin-top: 250px;
+  max-width: 1400px;
+
+  .btn-container {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .aside {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .main {
+    flex: 5;
+  }
+}
+
+@media screen and (max-width: #{$md}px) {
+  .container {
+    margin-top: 220px;
+  }
+}
+@media screen and (max-width: #{$sm}px) {
+  .container {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .container {
+  }
+}

@@ -1,0 +1,34 @@
+@import 'styles/vars';
+
+.gallery_slide {
+  margin-bottom: 50px;
+
+  @media screen and (max-width: #{$xs}px) {
+    margin-bottom: 15px;
+  }
+}
+
+.gallery_slide:not(:hover) > :global(.swiper-button-prev) {
+  opacity: 0 !important;
+}
+
+.gallery_slide:not(:hover) > :global(.swiper-button-next) {
+  opacity: 0 !important;
+}
+
+.gallery_slide > :global(.swiper-pagination span) {
+  width: 10px !important;
+  height: 10px !important;
+
+  margin: 10px 4px;
+}
+
+.gallery_slide > :global(.swiper-pagination span:not(.swiper-pagination-bullet-active)) {
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

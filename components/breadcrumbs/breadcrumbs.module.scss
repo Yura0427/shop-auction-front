@@ -1,0 +1,33 @@
+@import 'styles/vars';
+
+.breadcrumbs {
+  margin: 16px 0px 16px 0px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: #{$md}px) {
+  .breadcrumbs {
+    margin-bottom: 8px;
+  }
+}
+
+.breadcrumbs span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #424d52;
+}
+
+.breadcrumbs a {
+  color: #26bd62;
+  text-decoration-line: underline;
+}
+
+.divider {
+  padding: 0px 5px 0px 5px;
+  color: white;
+}

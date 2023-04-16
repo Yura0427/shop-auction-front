@@ -1,0 +1,11 @@
+@import 'styles/vars';
+
+.company-information {
+  a {
+    color: inherit;
+    text-decoration: none;
+    @media screen and (max-width: #{$sm}px) {
+      display: flex !important;
+    }
+  }
+}

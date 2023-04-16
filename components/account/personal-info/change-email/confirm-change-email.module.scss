@@ -1,0 +1,52 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: #{$md}px) {
+  .container {
+    margin-top: 250px;
+  }
+}
+
+.successMessage {
+  height: 100%;
+  padding: 50px;
+  background-color: $usual-nav-bg;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  max-width: 450px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: $primary-color;
+  align-self: center;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  font-size: 18px;
+  border:none;
+
+  .cartPriceTitle {
+    margin: 0 10px 0 0;
+
+    &::after {
+      content: "";
+      padding-left: 10px;
+      border-right: 2px solid #fff;
+    }
+  }
+
+  &:hover {
+    background-color: #1ba34f;
+  }
+}

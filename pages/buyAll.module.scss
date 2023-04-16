@@ -1,0 +1,207 @@
+@import url('http://fonts.cdnfonts.com/css/six-caps');
+@import 'styles/vars';
+
+.container {
+  font-family: "Six Caps", sans-serif;
+}
+
+.aboutPage {
+  height: 100%;
+  width:100%;
+  background: #26bd62;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  h4 {
+    text-align: center;
+    font-weight: 800;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin: 0 15px 30px 15px;
+  }
+}
+
+.logo {
+  letter-spacing: 16px;
+  margin: 0 15px 30px 15px;
+  padding-top: 50px;
+  color: #fff;
+
+  & a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    color: inherit;
+  }
+
+  & a:hover {
+    opacity: 0.8;
+  }
+}
+
+.textBlock {
+  left: 50px;
+  bottom: 10px;
+  background: #fff;
+  height: auto;
+  width: 400px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  border-radius: 15px;
+  margin: 0 0 100px 0;
+  font-weight: bolder;
+  border: solid 2px;
+}
+
+.basketBlock {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.h10 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  background: #e9f7f4;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.collapse {
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+  margin: 2px;
+  background: #fff;
+}
+
+.expand {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.close {
+  height: 20px;
+  width: 20px;
+  background-image: url(../public/close_icon.png);
+  position: relative;
+  background-size: 100%;
+  background-position: center;
+  border: 2px solid;
+  margin: 2px;
+  background-color: #fff;
+}
+
+.line {
+  height: 15px;
+  border-bottom: 3px solid;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.interior {
+  height: 12px;
+  width: 12px;
+  border: 2px solid;
+  border-top: 4px solid;
+}
+
+.knowBtn {
+  width: 230px;
+  background: #fff;
+  font-size: 26px;
+  color: black;
+  font-weight: 700;
+  padding: 5px 30px 10px 30px;
+  border-radius: 60px;
+  margin-top: 145px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  line-height: 1.4;
+  cursor: pointer;
+  &:hover{
+    background-color: #e9f7f4;
+  }
+}
+
+.dFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.p15 {
+  word-spacing: 15px;
+}
+
+.hLine {
+  height: 2px;
+  background-color: black;
+}
+
+.sneakers {
+  width: 240px;
+  height: 135px;
+  background-image: url(../public/sneakers.png);
+  position: relative;
+  background-color: #26bd62;
+  background-size: 100%;
+  margin-top: 35px;
+  margin-left: 25px;
+}
+
+.basket {
+  width: 330px;
+  height: 185px;
+  position: absolute;
+  background-image: url(../public/basket.png);
+  background-size: 100%;
+  top: 35px;
+  left: -110px;
+}
+
+.necklace {
+  width: 60px;
+  height: 100px;
+  background-image: url(../public/necklace.png);
+  position: absolute;
+  background-size: 100%;
+  top: -25px;
+  left: 50px;
+}
+
+@media screen and (max-width: 520px) {
+  .textBlock {
+    width: 300px;
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .knowBtn {
+    margin-top: 115px;
+  }
+
+  .aboutPage {
+    font-size: 80px;
+
+    h4 {
+      font-size: 26px;
+    }
+  }
+}
+

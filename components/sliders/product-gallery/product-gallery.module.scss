@@ -1,0 +1,28 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  & > div:first-child {
+    flex: 5;
+    height: 400px;
+    @media screen and (min-width: #{$xxl}px) {
+        height: 700px;
+    }
+  }
+
+  & > div:last-child {
+    flex: 1;
+    max-width: 90px;
+  }
+}
+
+.hide-container {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  height: 0.1px;
+}

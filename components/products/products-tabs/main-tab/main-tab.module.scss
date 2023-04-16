@@ -1,0 +1,15 @@
+.tab {
+  padding: 20px;
+}
+
+.selectBlock {
+  display: flex;
+  align-items: center;
+  margin: -15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+
+  div {
+    margin: 15px;
+  }
+}

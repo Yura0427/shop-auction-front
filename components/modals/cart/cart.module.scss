@@ -1,0 +1,389 @@
+@import 'styles/vars';
+@import 'styles/mixins';
+
+.header__iconProductCart {
+  min-width: 80px;
+  cursor: auto;
+  margin-left: 10px;
+  line-height: 19px;
+}
+
+.modal {
+  top: 20px;
+  height: calc(100vh - 40px);
+}
+
+.modalCart {
+  width: 864px;
+  max-width: 100%;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  padding: 100px 20px 20px 20px;
+  max-height: calc(80vh - 50px);
+}
+
+.wrapper {
+  transition: height 0.3s ease;
+
+  > div {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+  }
+}
+
+.modalBorder {
+  border-radius: 0.3rem;
+}
+
+.modalCartHeader {
+  position: fixed;
+  z-index: 2;
+  max-width: 740px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+
+  &__name {
+    margin: 40px 0 40px 0;
+
+    h1 {
+      flex-basis: 100%;
+      font-weight: 500;
+      font-size: 36px;
+      height: 24px;
+      line-height: 24px;
+      color: $font-color;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .cartButton {
+      margin-top: 50px;
+    }
+  }
+}
+
+.positionHeaderLeft {
+  text-align: left;
+}
+
+.positionHeaderCenter {
+  text-align: center;
+}
+
+.modalFooterContainer {
+  margin-top: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  z-index: 2;
+  max-width: 740px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.productItemMessage {
+  margin-left: 100px;
+}
+
+.cartBlockPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 15px 0;
+
+  &__left {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    > *:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  .buyBtn {
+    background-color: $primary-color;
+    width: 100%;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #333;
+    border-color: $primary-color;
+    box-shadow: 1px 1px 3px #333;
+    color: #fff;
+
+    &:hover {
+      background-color: $font-color;
+      color: #fff;
+      border-color: $font-color;
+    }
+  }
+}
+
+.close {
+  @include closeUniversal($size: 50px, $top: 25px, $right: 15px, $background: #fff);
+  z-index: 2;
+}
+
+.cartButton {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #a2a1a1;
+  align-self: center;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $font-color;
+  box-shadow: 1px 1px 3px #333;
+  min-width: 225px;
+  text-align: center;
+
+  .cartPriceTitle {
+    margin: 0 10px 0 0;
+
+    &::after {
+      content: '';
+      padding-left: 10px;
+      border-right: 2px solid #fff;
+    }
+  }
+
+  &:active {
+    background-color: rgba($primary-color, 0.9) !important;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.clearButton {
+  background-color: #fff;
+  border: none;
+  align-self: center;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $font-color;
+  min-width: 225px;
+  height: 41.6px;
+  text-align: center;
+  cursor: pointer;
+
+  &:active {
+    color: rgba($primary-color, 0.9) !important;
+  }
+
+  span {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding: 19px;
+    width: 22px;
+    height: 14px;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $primary-color;
+  }}
+
+.clearCart {
+  background-image: url('../../svgs/clearCart.svg');
+}
+
+.modalFooterButton {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createAccount a {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: green;
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .modal {
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .cartButton {
+    font-size: 16px;
+  }
+
+  .clearButton {
+    min-width: 175px;
+    flex-direction: column;
+    padding-left: 4px;
+  }
+
+  .modalCart {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    height: 100%;
+  }
+
+  .modalCartHeader {
+    &__name {
+      margin: 40px 0 40px;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    .emptyBucket {
+      margin-top: 130px;
+    }
+  }
+
+  .modalFooterContainer {
+    bottom: 30px;
+    width: 95%;
+    .modalCartFooter {
+      font-size: 22px;
+    }
+
+    .modalFooterButton {
+      width: 100%;
+      margin-top: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .createAccount {
+        order: 2;
+        margin-top: 25px;
+
+        > a {
+          font-size: 17px;
+        }
+      }
+
+      button:nth-of-type(1) {
+        display: none;
+      }
+
+      button:nth-of-type(2) {
+        order: 1;
+        flex-grow: 1;
+        margin-left: 0;
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  .cartBlockPrice {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .content {
+    max-height: 100vh;
+    min-height: 100vh;
+    padding: 100px 20px 180px 20px;
+  }
+
+  .buyBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    .cartPriceTitle {
+      margin-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .cartBlockPrice {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    &__left {
+      width: 100%;
+      flex-direction: row;
+
+      .cartButton {
+        flex-grow: 1;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+        min-width: 0;
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .cartPrice {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .modalFooterButton {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .content {
+    padding: 100px 20px 180px;
+  }
+
+  .modalCartHeader {
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .cartButton {
+    .cartPriceTitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .modalFooterContainer {
+    .modalFooterButton {
+      .createAccount {
+        > a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

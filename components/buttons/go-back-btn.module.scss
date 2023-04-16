@@ -1,0 +1,49 @@
+@import 'styles/vars';
+
+.go-back-btn {
+  display: flex;
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 0.2rem;
+  background-color: rgba($primary-color, 0.1);
+  transform: translateX(1.25rem);
+  transition: all ease 0.25s;
+  text-decoration: none;
+  color: $font-color;
+
+  svg {
+    transform: translateY(4px) scale(1.2);
+    margin-right: 0.5rem;
+    fill: $primary-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($primary-color, 0.2);
+    transition: all ease 0.25s;
+    text-decoration: none;
+    color: inherit;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-right: 1rem solid rgba($primary-color, 0.2);
+      border-top: 1.25rem solid transparent;
+      border-bottom: 1.25rem solid transparent;
+      left: -1rem;
+      top: 0;
+      transition: all ease 0.25s;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-right: 1rem solid rgba($primary-color, 0.1);
+    border-top: 1.25rem solid transparent;
+    border-bottom: 1.25rem solid transparent;
+    left: -1rem;
+    top: 0;
+    transition: all ease 0.25s;
+  }
+}

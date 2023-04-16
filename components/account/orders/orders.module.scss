@@ -1,0 +1,42 @@
+@import "styles/vars";
+
+.orders-page {
+  margin-bottom: 30px;
+  .order-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.error-msg {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+
+  p {
+    margin: 0;
+  }
+
+  .btn-link {
+    padding: 0 0.2rem;
+    font-size: inherit;
+    box-shadow: none;
+
+    &:active,
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: rgb(0, 0, 129);
+    }
+  }
+}
+
+.cancelled-order {
+  color: #888888 !important;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,118 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 15px;
+
+  li {
+    font-size: 18px;
+
+    &:hover {
+      background: #fff;
+
+      a {
+        text-decoration: none;
+
+        .wrapper {
+          border: 2px solid #3c5d43;
+        }
+      }
+
+      .icon {
+        background: #3c5d43;
+      }
+
+      .arrowIcon {
+        color: #3c5d43;
+      }
+
+      .cardHeader {
+        padding: 0;
+
+        img {
+          filter: hue-rotate(10deg) sepia(40%);
+        }
+      }
+    }
+
+    .cardHeader {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      transition: .3s ease;
+      overflow: hidden;
+      height: 160px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        transition: .3s ease;
+      }
+    }
+
+    .cardBottom {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      span {
+        line-height: 1.3;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+
+      .wrapper {
+        width: 262px;
+        border: 2px solid transparent;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s ease;
+        color: #3c5d43;
+      }
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        background: #fff;
+        margin-right: 10px;
+        display: inline-block;
+        transition: .3s ease;
+      }
+
+      .arrowIcon {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    .cardBottom {
+      justify-content: center !important;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .list {
+    display: none;
+  }
+}

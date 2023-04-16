@@ -1,0 +1,58 @@
+@import 'styles/vars';
+
+.container {
+  margin-top: 295px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: #{$md}px) {
+  .container {
+    margin-top: 358px;
+  }
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .container {
+
+    margin-top: 250px;
+    margin-bottom: 70px;
+  }
+}
+
+.successMessage {
+  height: 100%;
+  padding: 40px;
+  background-color: $usual-nav-bg;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: $font-color;
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 18px;
+
+  .cartPriceTitle {
+    margin: 0 10px 0 0;
+
+    &::after {
+      content: "";
+      padding-left: 10px;
+      border-right: 2px solid #fff;
+    }
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}

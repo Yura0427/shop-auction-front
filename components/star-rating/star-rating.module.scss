@@ -1,0 +1,104 @@
+@import 'styles/vars';
+
+.ratingBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .rating_title {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.rating .stars {
+  position: relative;
+  display: block;
+  float: left;
+  height: 20px;
+  width: 105px;
+  background-image: url("../../public/star-img/stars.png");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  margin-right: 5px;
+}
+
+.rating .stars .on {
+  height: 20px;
+  background-image: url("../../public/star-img/stars.png");
+  background-position: 0 -20px;
+}
+
+.rating .stars .live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating .stars .live span {
+  display: block;
+  float: left;
+  width: 21px;
+  height: 20px;
+  background-image: url("../../public/star-img/stars.png");
+  background-repeat: no-repeat;
+  background-position: 0 -20px;
+}
+
+.rating .stars .hovered span:hover~span {
+  background-position: 0 0;
+}
+
+.rating .stars .hovered:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.spinner {
+  position: relative;
+  top: -5px;
+}
+
+@media screen and (min-width: #{$sm}px) {
+  .rating .stars {
+    height: 15px;
+    width: 80px;
+    background-size: 16px;
+  }
+
+  .rating .stars .on {
+    height: 15px;
+    background-size: 16px;
+    background-position: 0 -16px;
+  }
+
+  .rating .stars .live span {
+    height: 15px;
+    width: 16px;
+    background-size: 16px;
+    background-position: 0 -16px;
+  }
+}
+
+@media screen and (min-width: #{$xl}px) {
+  .rating .stars {
+    height: 20px;
+    width: 105px;
+    background-size: 21px;
+  }
+
+  .rating .stars .on {
+    height: 20px;
+    background-size: 21px;
+    background-position: 0 -20px;
+  }
+
+  .rating .stars .live span {
+    height: 20px;
+    width: 21px;
+    background-size: 21px;
+    background-position: 0 -20px;
+  }
+}

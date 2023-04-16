@@ -1,0 +1,42 @@
+@import 'styles/vars';
+
+.btn {
+  border-radius: 30px;
+  background-color: $primary-color;
+  padding: 10px 30px;
+  font-size: 22px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  outline: none;
+  text-shadow: 1px 1px #545454;
+  transition: .3s ease;
+  box-shadow: #545454 1px 1px 3px;
+  border: 2px solid $primary-color;
+  min-width: 164px;
+  min-height: 48px;
+
+  &.inCart {
+    background: $font-color;
+    border-color: $font-color;
+
+    &:hover {
+      background: #fff;
+      color: $font-color;
+      text-shadow: #fff 0 0 0;
+    }
+  }
+
+  &:hover {
+    background: $font-color;
+    box-shadow: #545454 0 0 1px;
+    border-color: $font-color;
+  }
+
+  svg {
+    filter: drop-shadow(1px 1px #545454);
+    margin-right: 5px;
+  }
+}

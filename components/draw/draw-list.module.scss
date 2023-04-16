@@ -1,0 +1,23 @@
+.winners {
+    &_wrapper{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &_title{
+        margin-bottom: 45px;
+        font-size: 2.5rem;
+    }
+
+    &_item{
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+
+    &_text{
+        color: #26bd62;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+}

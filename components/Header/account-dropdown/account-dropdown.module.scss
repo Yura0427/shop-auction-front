@@ -1,0 +1,41 @@
+@import 'styles/vars';
+
+.dropdown,
+.dropdown.show > .btn-secondary.dropdown-toggle {
+  button {
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+    margin-bottom: 2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: inherit;
+      box-shadow: none;
+      background-color: rgba($primary-color, 0.1);
+    }
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+}
+
+.avatar {
+  margin-right: 0.7rem;
+}
+
+.history_icon {
+  g {
+    fill: inherit;
+  }
+}

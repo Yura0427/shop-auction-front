@@ -1,0 +1,108 @@
+@import 'styles/vars';
+
+@import 'styles/mixins';
+
+.Auth__modal__header__name {
+  text-align: center;
+  font-size: 20px;
+}
+
+.modal {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 510px;
+}
+
+.modal_logout {
+  width: 300px;
+}
+
+.modalBody {
+  width: 100%;
+}
+
+.logout_footer {
+  button {
+    margin: 2px;
+    width: 50px;
+    outline: none;
+    border: none;
+
+    &:active {
+      background-color: rgba($font-color, 0.9) !important;
+    }
+  }
+  .yes_button {
+    background-color: $primary-color;
+    transition: opacity 0.3s ease;
+
+    &:active {
+      background-color: rgba($primary-color, 0.9) !important;
+    }
+  }
+  .yes_button:hover {
+    opacity: 0.7;
+  }
+}
+
+.navTabs {
+  padding: 20px 20px 0 20px;
+  font-size: 20px;
+  margin-bottom: 1rem;
+
+  a {
+    cursor: default;
+  }
+}
+
+.close {
+  @include closeUniversal;
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .close {
+    background-color: whitesmoke;
+  }
+
+  .fade {
+    @include modalTemplate;
+
+    .modal {
+      display: flex;
+      justify-content: center;
+
+      .content {
+        padding: 40px 0;
+
+        > header,
+        .modalBody {
+          display: flex;
+          justify-content: center;
+          border: none;
+        }
+        background-color: inherit;
+      }
+    }
+  }
+
+  .navTabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    > li {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .fade {
+    .modal {
+      .content {
+        padding: 60px 0;
+      }
+    }
+  }
+}

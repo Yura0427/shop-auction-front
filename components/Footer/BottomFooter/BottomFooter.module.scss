@@ -1,0 +1,58 @@
+@import '../../../styles/vars';
+
+.bottomfooter {
+  background-color: $font-color;
+
+  &__container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: $primary-color;
+      transition: opacity 0.3s ease;
+      font-weight: 300;
+    }
+
+    a:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+    span {
+      color: white;
+      font-weight: 300;
+
+      @media screen and (max-width: #{$lg}px) {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: #{$lg}px) {
+      margin-top: 0px;
+      flex-direction: column;
+      margin-left: 25px;
+    }
+
+    &__design {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: white;
+      margin-top: 15px;
+
+      @media screen and (max-width: #{$lg}px) {
+        justify-content: center;
+      }
+
+      a {
+        color: #ffa500;
+        transition: opacity 0.3s ease;
+        font-weight: 500;
+      }
+
+      a:hover {
+        text-decoration: none;
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import './styles/vars';
+
+.favorite__wrapper {
+  margin-bottom: 30px;
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(38, 189, 98);
+    padding: 20px;
+  }
+
+  .favorite {
+    &_block {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &_spinner {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    &_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      min-width: 80px;
+      margin-right: 40px;
+
+      & img {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+
+    &_delete {
+      position: relative;
+      min-width: 35px;
+      height: 35px;
+      border: 2px solid grey;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        color: #ba3a51;
+        border-color: #ba3a51;
+      }
+    }
+  }
+
+  .priceBlock {
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: auto;
+
+    div {
+      span:first-child {
+        font-size: 24px;
+      }
+    }
+
+    button {
+      font-size: 16px;
+      min-width: 120px;
+      min-height: 35px;
+      padding: 5px 15px;
+      margin: 0;
+    }
+  }
+
+  .favorite_info {
+    display: flex;
+    flex-direction: column;
+
+    .sizeColor {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    &_name {
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      &:hover {
+        color: #26bd62;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$sm}px) {
+  .favorite__wrapper_item {
+    display: grid;
+    grid-template-areas: 'm m m m c'
+    'm m m m c'
+    'p p p p p';
+
+    .favorite_block {
+      grid-area: m;
+    }
+
+    .priceBlock {
+      grid-area: p;
+      margin: 0;
+    }
+
+    .favorite_delete {
+      grid-area: c;
+    }
+  }
+}

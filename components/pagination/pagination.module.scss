@@ -1,0 +1,25 @@
+@import 'styles/vars';
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .PrevNext {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .downloadMore {
+    max-width: 375px;
+  }
+
+  button {
+    margin: 10px;
+
+    &:active {
+      background-color: rgba(#6c757d, 0.9) !important;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import 'styles/vars';
+
+.container{
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin: 10vh auto 0 auto;
+    @media screen and (max-width: 520px){
+        width: 300px;
+    }
+    @media screen and (max-width: 1200px){
+        margin: 15vh auto 0 auto;
+    }
+
+}
+
+.section{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.action{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textarea{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.text{
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: $primary-color;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    min-width: 125px;
+    max-height: 107px;
+    height: 48px;
+    padding: 10px 30px;
+    &:hover {
+        background-color: $secondary-color;
+    }
+    @media screen and (max-width: 520px){
+        font-size: 14px;
+    }
+}
+
+.arrow{
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateY(75%);
+}
+
+.tip{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+    >div{
+        text-align: center;
+        >span{
+            background-color: #fff899;
+            padding: 3px;
+            border-radius: 5px;
+
+
+        }
+    }
+}

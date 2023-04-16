@@ -1,0 +1,39 @@
+/* colors */
+$primary-color: #26bd62;
+$secondary-color: #1ba34f;
+$accent-color: #ffa500;
+$background-hover: #ebf2f2;
+$font-color: #4e5a5e;
+$font-color-gray: #727272;
+$usual-nav-bg: #e8edef;
+$blueButton: #4096e3;
+$simpleBorder: #ced4da;
+$discountedPriceColor:#ff0e0e;
+$dropdownLiHeight: 55px;
+
+/* braikpoints */
+$xs: 575;
+$sm: 768;
+$md: 992;
+$lg: 1200;
+$xl: 1920;
+$xxl: 2560;
+
+
+/* exports */
+:export {
+  primaryColor: $primary-color;
+  backgroundHover: $background-hover;
+  fontColor: $font-color;
+  usualNavBg: $usual-nav-bg;
+  blueButton: $blueButton;
+  simpleBorder: $simpleBorder;
+  dropdownLiHeight: $dropdownLiHeight;
+  xs: $xs;
+  sm: $sm;
+  md: $md;
+  lg: $lg;
+  xl: $xl;
+  xxl: $xxl;
+
+}

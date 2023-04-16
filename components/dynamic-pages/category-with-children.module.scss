@@ -1,0 +1,9 @@
+.h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 575px) {
+  .article, .header {
+    display: none;
+  }
+}

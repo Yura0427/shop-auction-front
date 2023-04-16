@@ -1,0 +1,28 @@
+@import '../../styles/vars';
+
+.spinnerContainer {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: #{$md}px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    h1 {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .container {
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+}

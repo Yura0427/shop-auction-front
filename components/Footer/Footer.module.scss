@@ -1,0 +1,145 @@
+@import 'styles/vars';
+
+.wraper {
+  width: 100%;
+  background-color: $font-color;
+  margin-top: auto;
+  z-index: 10;
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 1400px;
+    margin: auto;
+
+    @media screen and (min-width: #{$xxl}px) {
+      max-width: 2100px;
+    }
+
+    @media screen and (max-width: #{$md}px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: #{$lg}px) {
+      padding-top: 10px;
+    }
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      :first:child {
+        position: relative;
+        bottom: 10px;
+      }
+
+      @media screen and (max-width: #{$md}px) {
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+      }
+    }
+
+    &__company-information-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .company-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 17px;
+        font-size: 15px;
+        color: white;
+
+        @media screen and (max-width: #{$md}px) {
+          position: relative;
+          left: 14px;
+          font-size: 14px;
+          padding-bottom: 20px;
+        }
+
+        :first-child,
+        :nth-child(2) {
+          display: flex;
+          align-items: center;
+          column-gap: 8px;
+        }
+
+        :nth-child(2) {
+          @media screen and (max-width: #{$md}px) {
+            max-width: 165px;
+          }
+        }
+
+        :first-child {
+          a:hover {
+            color: $background-hover;
+          }
+        }
+
+        svg {
+          flex-shrink: 0;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding-right: 45px;
+      margin-left: auto;
+
+      @media screen and (max-width: 1500px) {
+        padding-right: 100px;
+      }
+
+      @media screen and (max-width: #{$md}px) {
+        align-items: center;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    &__logo {
+      font-family: 'Six Caps', sans-serif;
+      letter-spacing: 1px;
+      font-size: 64px;
+      color: $primary-color;
+
+      & a {
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        color: white;
+      }
+
+      & a:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__copy {
+      background-color: $font-color;
+      color: white;
+      font-weight: 300;
+    }
+
+    &__top {
+      @media screen and (max-width: #{$lg}px) {
+        display: flex;
+      }
+
+      @media screen and (max-width: #{$md}px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

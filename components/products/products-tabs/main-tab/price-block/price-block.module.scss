@@ -1,0 +1,74 @@
+@import "styles/vars";
+
+.wrapper {
+  border: 1px solid $usual-nav-bg;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 1px $usual-nav-bg;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 10px 0;
+  }
+
+  .priceBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 15px;
+
+    .price {
+      font-size: 30px;
+      margin-bottom: 2px;
+    }
+
+    .discountedPrice{
+      @extend .price;
+      color:$discountedPriceColor;
+    }
+
+    .oldPrice {
+      font-size: 20px;
+      margin-bottom: 4px;
+      color: $font-color;
+      text-decoration: line-through;
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      color: $primary-color;
+    }
+  }
+
+  .notAvailable {
+    .price {
+      color: #bcbdbe;
+    }
+    .availability {
+      color: red;
+    }
+  }
+
+  .like {
+    margin-left: 15px;
+  }
+}
+
+.compact {
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+}
+
+
+@media (max-width: #{$sm}px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+}

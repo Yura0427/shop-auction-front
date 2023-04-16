@@ -1,0 +1,36 @@
+.reviews-container {
+  min-height: 50vh;
+  padding: 20px;
+}
+
+.reviews-count {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.reviews-form-wrapper {
+  margin-top: 3rem;
+}
+
+.error-msg {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+
+  p {
+    margin: 0;
+  }
+
+  .btn-link {
+    padding: 0 0.2rem;
+    font-size: inherit;
+    box-shadow: none;
+
+    &:active,
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: rgb(0, 0, 129);
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #f8f8f8;
+  outline: none;
+  border: 2px solid rgb(38, 189, 98);
+  border-radius: 30px;
+  transition: .3s ease;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.animated .icon svg {
+    animation: rotate 2s ease infinite;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.12);
+    background: rgb(38, 189, 98);
+
+    .icon {
+      transform: rotate(90deg);
+    }
+
+    .icon, .text {
+      color: white;
+    }
+  }
+
+  &:active {
+    background: rgb(19, 138, 66);
+    border-color: rgb(19, 138, 66);
+  }
+
+  &:disabled {
+    background: #939393;
+    border-color: #939393;
+
+    .text, .icon {
+      color: #dddcdc;
+    }
+  }
+
+  .icon {
+    color: $primary-color;
+    transition: .3s;
+    margin-right: 15px;
+  }
+
+  .text {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: rgb(19, 138, 66);
+    font-size: 16px;
+    transition: .3s;
+
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

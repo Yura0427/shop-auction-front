@@ -1,0 +1,134 @@
+@import 'styles/vars';
+
+.containerSettings {
+padding: 16px 0;
+
+  &,
+  button,
+  .filterButton,
+  .catalogView {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  button,
+  button:hover,
+  button:focus,
+  button:active {
+    color: $primary-color !important;
+    background-color: #fff !important;
+    border-color: $simpleBorder !important;
+    align-items: center;
+    font-size: 14px;
+    padding: 1px 9px;
+  }
+
+  select,
+  select:hover,
+  select:focus {
+    box-shadow: none;
+  }
+
+  select:focus {
+    border-color: $simpleBorder;
+  }
+
+  .quantityBlock {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-left: 15px;
+    font-size: 14px;
+
+    label {
+      padding: 0;
+      margin: 0 10px 0 0;
+    }
+
+    .quantity {
+      width: auto;
+      height: 32px;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      padding-left: 5px;
+    }
+  }
+
+  .selected,
+  .selected:hover,
+  .selected:focus {
+    color: #fff !important;
+    background-color: $primary-color !important;
+  }
+
+  .sorting {
+    width: 210px;
+    font-size: 14px;
+    height: 32px;
+  }
+
+  .catalogView > button {
+    box-shadow: none !important;
+  }
+
+  .filterButton {
+    display: none;
+    align-items: center;
+    @extend .selected;
+
+    :first-child {
+      margin-right: 15px;
+    }
+  }
+
+  .filterButton:hover,
+  .filterButton:focus,
+  .filterButton:active {
+    @extend .selected;
+  }
+}
+
+@media screen and (max-width: #{$md}px) {
+  .containerSettings {
+    .catalogView {
+      margin-right: 20px;
+    }
+
+    .filterButton {
+      display: flex;
+    }
+    .filterButton:active {
+      box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: #{$xs}px) {
+  .containerSettings {
+    .sorting {
+      height: 40px;
+    }
+
+    .catalogView {
+      display: none;
+    }
+
+    .filterButton,
+    .filterButton:active,
+    .filterButton:hover,
+    .filterButton:focus {
+      margin-left: 10px;
+      padding: 5px 15px;
+
+      :first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

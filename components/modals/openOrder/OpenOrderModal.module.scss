@@ -1,0 +1,28 @@
+@import 'styles/vars';
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  background-color: #ffffff;
+  height: 220px;
+  color: black;
+  padding: 10px;
+  margin: 4px;
+}
+.button {
+  margin-top: 20px;
+  background-color: $primary-color;
+  height: 45px;
+  width: 250px;
+  color: $usual-nav-bg;
+  border: none;
+  border-radius: 20px;
+  font-size: 22px;
+  &:hover {
+    background-color: #269954;
+  }
+}

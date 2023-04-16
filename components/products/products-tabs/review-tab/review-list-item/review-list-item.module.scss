@@ -1,0 +1,75 @@
+@import 'styles/mixins';
+
+.hide-container {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.comment-list-item {
+  padding-left: 0;
+  padding-right: 0;
+
+  .header {
+    @include center-flex('justify');
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    &-author {
+      @include center-flex('ver');
+      overflow: hidden;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0.8rem;
+
+        .author-name {
+          font-weight: 500;
+        }
+
+        .comment-date {
+          font-style: italic;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .toggle {
+      box-shadow: none;
+      padding: 0.2rem 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-body {
+    padding: 0 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &-text {
+    white-space: pre-line;
+  }
+
+  .action-btns-wrapper {
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease 0.25s;
+  }
+
+  &:hover .action-btns-wrapper {
+    opacity: 1;
+    pointer-events: initial;
+    transition: all ease 0.25s;
+  }
+}

@@ -1,0 +1,129 @@
+@import 'styles/vars';
+
+$heading-font-size: 24px;
+$heading-font-size-mobile: 20px;
+$table-cell-font-size: 14px;
+
+.tabs {
+  border: 1px solid #e7edef;
+  border-radius: 5px;
+
+  .tabsNav {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .tabsItem a {
+    color: $font-color-gray;
+    font-weight: 500;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    margin: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background: $background-hover;
+    }
+  }
+
+  .tabsItem a.active {
+    color: #fff;
+    background: $primary-color;
+  }
+
+  .tabsHeading {
+    font-size: $heading-font-size;
+  }
+}
+
+.productName {
+  color: #727272;
+}
+
+.specTab {
+  padding: 20px;
+
+  .table {
+    table-layout: fixed;
+    border-collapse: separate;
+
+    .caption {
+      caption-side: top;
+      font-weight: 500;
+      color: $font-color;
+    }
+
+    tr {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    td {
+      line-height: 1;
+      padding: 0;
+      border-top: none;
+      font-size: $table-cell-font-size;
+    }
+
+    .column_1 {
+      max-width: 400px;
+      color: $font-color-gray;
+      border-bottom: 1px dashed #c6c4c4;
+      margin-right: 10px;
+      width: 40%;
+
+      span {
+        background: #fff;
+        padding-bottom: 1px;
+      }
+    }
+
+    .column_2 {
+      width: 60%;
+      margin-top: 3px;
+
+      ul li:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .emptySpec {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: #{$sm}px) {
+  .specTab {
+    .table {
+      .column_1 {
+        border-bottom: none;
+      }
+
+      .column_2 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .tabs {
+    margin: 0 -15px;
+
+    .tabsHeading {
+      font-size: $heading-font-size-mobile;
+    }
+  }
+}

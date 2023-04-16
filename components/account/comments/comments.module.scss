@@ -1,0 +1,110 @@
+@import 'styles/mixins';
+@import 'styles/vars';
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.hide-container {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.comment-list-item {
+  padding-left: 0;
+  padding-right: 0;
+
+  .title {
+    color: $font-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .header {
+    @include center-flex('justify');
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    &-product {
+      @include center-flex('ver');
+      overflow: hidden;
+
+      &-img {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+        img {
+          border-radius: 10%;
+          min-width: auto !important;
+          height: auto !important;
+          width: auto !important;
+        }
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0.8rem;
+
+        .product-name {
+          font-weight: 500;
+        }
+
+        .comment-date {
+          font-style: italic;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .toggle {
+      box-shadow: none;
+      padding: 0.2rem 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-body {
+    padding: 0 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &-text {
+    white-space: pre-line;
+  }
+
+  .action-btns-wrapper {
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease 0.25s;
+  }
+
+  &:hover .action-btns-wrapper {
+    opacity: 1;
+    pointer-events: initial;
+    transition: all ease 0.25s;
+  }
+}

@@ -1,0 +1,84 @@
+@import 'styles/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 200;
+
+  &_windowBtn {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $primary-color;
+    color: white;
+    margin-bottom: 0.3rem;
+    font-size: 30px;
+    transition: 0.5s all;
+
+    &:hover {
+      color: $primary-color;
+      background-color: #fff;
+      border: 3px solid $primary-color;
+      padding: 2px;
+    }
+
+    &.active {
+      display: none;
+    }
+  }
+
+  &_card {
+    &_body {
+      width: 100%;
+      max-width: 450px;
+
+      &_input {
+        margin-top: 10px;
+      }
+
+      &_cross {
+        position: relative;
+        left: 93%;
+        font-size: 22px;
+        color: $primary-color;
+        cursor: pointer;
+
+        :hover {
+          color: #1ba34f;
+        }
+      }
+
+      &_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        :focus {
+          box-shadow: none;
+        }
+      }
+
+      > span {
+        text-indent: 20px;
+      }
+
+      > p {
+        font-size: 20px;
+        text-align: center;
+        color: #1ba34f;
+      }
+    }
+  }
+}
+
+.response {
+  z-index: 101;
+  top: 30%;
+  left: 10%;
+  position: fixed;
+}

@@ -1,0 +1,30 @@
+@import '../../../styles/vars';
+
+.product-modal {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .header > div {
+    width: 100%;
+  }
+
+  .price-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .product-name {
+    margin: 0;
+    padding: 0;
+    line-height: 3rem;
+    vertical-align: middle;
+    margin-right: 2rem;
+  }
+
+  .modalBody {
+    padding-bottom: 3rem;
+  }
+}
